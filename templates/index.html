@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index_style.css') }}">
+
+</head>
+<body>
+
+    <div class="daum_content">
+        <h1>여기는 오늘의유머</h1>
+        <ul>
+            {% for i in range(0, list2_len) %}
+                <a href={{list2_href[i]}}><li>{{list2[i]}}</li></a>
+            {% endfor %}
+
+        </ul>
+
+    </div>
+
+    <div class="daum_content">
+        <h1>여기는 클리앙</h1>
+        <ul>
+            {% for i in range(0, list3_len) %}
+                <a href={{list3_href[i]}}><li>{{list3[i]}}</li></a>
+            {% endfor %}
+
+        </ul>
+
+    </div>
+
+
+
+</body>
+</html>
